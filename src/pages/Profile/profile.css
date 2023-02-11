@@ -1,0 +1,154 @@
+.user-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+.account-settings .user-profile h6.user-email {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.account-settings .about {
+    margin: 1rem 0 0 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.card {
+    background: rgba(118, 139, 173, 0.45);
+    border: 1px solid rgba(118, 139, 173, 0.25);
+    box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+    backdrop-filter: blur(15px);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+.form-control.form-update-profile {
+    border: 1px solid #596280;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 0.825rem;
+    background: #1a233a;
+    color: #bcd0f7;
+}
+
+.profile__bg {
+    position: relative;
+}
+
+.profile__bg img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    top: 0;
+    left: 0;
+}
+
+.row.gutters h5,
+.row.gutters h6 {
+    color: orange !important;
+}
+
+.user__profile .user-btn p {
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.user__profile .user-btn p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid orange;
+    width: 0;
+    transition: all 0.3s ease;
+}
+.user__profile .user-btn p:hover::after {
+    width: 100%;
+}
+.user__profile .user-btn p.tab--active::after {
+    width: 100%;
+}
+.user-profile h5.user-name {
+    color: white !important;
+}
+.ticket__history .table tr,
+.ticket__history .table th,
+.ticket__history .table td {
+    border: none;
+}
+.ticket__history .history__title {
+    color: orange;
+}
+.ticket__movie__img {
+    max-width: 200px;
+    height: 200px;
+}
+.ticket__history td {
+    color: white;
+}
+
+.ticket__movie__date {
+    white-space: nowrap;
+}
+
+/* ------------------------------- RESPONSIVE ------------------------------- */
+@media screen and (max-width: 992px) {
+    .ticket__history .ticket__movie__img {
+        max-width: 350px;
+    }
+    .ticket__history th,
+    .ticket__history td {
+        padding: 8px;
+    }
+    .ticket__history th {
+        font-size: 0.8rem;
+    }
+
+    .ticket__history tr td {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .ticket__history th,
+    .ticket__history td {
+        padding: 4px;
+    }
+    .ticket__history th {
+        font-size: 0.7rem;
+    }
+    .ticket__history tr td {
+        font-size: 0.7rem;
+    }
+    .ticket__history .history__title{
+        white-space: normal;
+    }
+}

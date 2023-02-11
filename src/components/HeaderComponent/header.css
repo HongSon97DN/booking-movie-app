@@ -1,0 +1,65 @@
+.nav__bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar .nav-item a {
+    color: white;
+}
+.navbar .nav-item a:hover {
+    color: orange;
+    transition: all 0.3s;
+}
+.header_login {
+    position: relative;
+}
+.header_login:hover .user_profile {
+    opacity: 1;
+}
+.header_user {
+    padding: 0 1rem;
+    cursor: pointer;
+}
+.header_user:hover {
+    cursor: pointer;
+    color: orange;
+    transition: all 0.3s;
+}
+.user_profile {
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-top: 0.75rem;
+    border: 1px solid;
+    z-index: 10;
+    width: 111px;
+    border-radius: 5px;
+    color: #000;
+    background: #fff;
+}
+.user_detail:hover,
+.user_logout:hover {
+    background: orange;
+    cursor: pointer;
+    color: #fff;
+}
+.user_profile a {
+    color: #000;
+    display: block;
+}
+.user_profile a:hover {
+    background: orange;
+    cursor: pointer;
+    color: #fff;
+}
+.user_profile.active {
+    display: block;
+}
+.user_profile .user_detail,
+.user_profile .user_logout {
+    padding: 5px 8px;
+}
+
+.prevent--select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}

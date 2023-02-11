@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* color text */
+    --primary-color: #fff;
+    --second-color: #ff1744;
+
+    /* color background */
+    --bg-main-body: #060f19;
+    --bg-main-div: #182028;
+    /* btn color */
+    --btn-primary: #ff1744;
+
+    --toastify-color-light: #fff;
+    --toastify-color-dark: #121212;
+    --toastify-color-info: #3498db;
+    --toastify-color-success: #07bc0c;
+    --toastify-color-warning: #f1c40f;
+    --toastify-color-error: #e74c3c;
+    --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+    --toastify-icon-color-info: var(--toastify-color-info);
+    --toastify-icon-color-success: var(--toastify-color-success);
+    --toastify-icon-color-warning: var(--toastify-color-warning);
+    --toastify-icon-color-error: var(--toastify-color-error);
+
+    --toastify-toast-width: 320px;
+    --toastify-toast-background: #fff;
+    --toastify-toast-min-height: 64px;
+    --toastify-toast-max-height: 800px;
+    --toastify-font-family: sans-serif;
+    --toastify-z-index: 9999;
+
+    --toastify-text-color-light: #757575;
+    --toastify-text-color-dark: #fff;
+
+    /* Used only for colored theme */
+    --toastify-text-color-info: #fff;
+    --toastify-text-color-success: #fff;
+    --toastify-text-color-warning: #fff;
+    --toastify-text-color-error: #fff;
+
+    --toastify-spinner-color: #616161;
+    --toastify-spinner-color-empty-area: #e0e0e0;
+
+    /* Used when no type is provided */
+    --toastify-color-progress-light: linear-gradient(
+        to right,
+        #4cd964,
+        #5ac8fa,
+        #007aff,
+        #34aadc,
+        #5856d6,
+        #ff2d55
+    );
+    /* Used when no type is provided */
+    --toastify-color-progress-dark: #bb86fc;
+    --toastify-color-progress-info: var(--toastify-color-info);
+    --toastify-color-progress-success: var(--toastify-color-success);
+    --toastify-color-progress-warning: var(--toastify-color-warning);
+    --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    background-color: #080d15;
+}
+
+.movie__title {
+    font-size: 1.875rem;
+    text-align: center;
+    color: rgba(255, 165, 0, 0.9);
+}
+
+/* Overide css Slick */
+.banner_icon-right,
+.banner_icon-left {
+    opacity: 0;
+    transition: all 0.5s;
+    color: rgb(194, 158, 91);
+    font-size: 34px;
+}
+
+.slick-slider.slick-initialized:hover .banner_icon-right,
+.slick-slider.slick-initialized:hover .banner_icon-left {
+    opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* modalCss */
+@media (min-width: 992px) {
+    .modal.show .modal-dialog {
+        max-width: 50% !important;
+    }
+}
+
+.modal-dialog {
+    margin: 6rem auto;
+}
+
+.btn_primary {
+    font-size: 1.6vw;
+    font-weight: 600;
+    color: white;
+    background-color: orange;
+    box-shadow: 0px 0px 8px orange;
+}
+
+.btn_white {
+    font-size: 1.6vw;
+    background-color: rgba(106, 105, 105, 0.168);
+    box-shadow: 0px 0px 8px black;
+    color: orange;
+    font-weight: 600;
+}
+
+.title-basic {
+    font-weight: 600;
+    color: yellow;
+}
+
+.title-basic-orange {
+    font-weight: 600;
+    color: orange;
+    font-size: 16px;
+}
+
+.title-basic-white {
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+}
+
+.spinner--loading {
+    position: relative;
+}
+
+.spinner--loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 5px solid darkgray;
+    border-radius: 50%;
+    border-top: 5px solid var(--btn-primary);
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+}
+
+.btn--loader {
+    border: 5px solid darkgray;
+    border-radius: 50%;
+    border-top: 5px solid orange;
+    width: 15px;
+    height: 15px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ----------------------------- PRE-LOADING CSS ---------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-main-div);
+    z-index: 9999;
+}
+
+.loading--text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+
+.loading--text span {
+    display: inline-block;
+    margin: 0 5px;
+    color: orange;
+    font-family: "Quattrocento Sans", sans-serif;
+}
+
+@keyframes blur-text {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(4px);
+    }
+}
+
+/* ------------------------------ Toast Design ------------------------------ */
+.toast--default {
+    width: 250px;
+}
+
+/* ----------------- Button css -------------- */
+.btn_div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.btn_movie {
+    --c: orange;
+    color: var(--c);
+    font-size: 16px;
+    border: 2px solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+.btn_movie span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.btn_movie:hover {
+    color: #fff;
+}
+
+.btn_movie:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.btn_movie span:nth-child(1) {
+    --n: 1;
+}
+
+.btn_movie span:nth-child(2) {
+    --n: 2;
+}
+
+.btn_movie span:nth-child(3) {
+    --n: 3;
+}
+
+.btn_movie span:nth-child(4) {
+    --n: 4;
+}
+
+/* ------------------Media Query---------------- */
+@media (max-width: 576px) {
+
+    .banner_icon-right,
+    .banner_icon-left {
+        font-size: 27px;
+    }
+
+    .btn_primary {
+        font-size: 2.5vw;
+        padding: 4px;
+    }
+
+    .title-basic-orange {
+        font-size: 14px;
+    }
+
+    .title-basic-white {
+        font-size: 10px;
+    }
+
+    .btn_white {
+        font-size: 2.5vw;
+        padding: 4px;
+    }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+     .banner_icon-right,
+    .banner_icon-left {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+     .banner_icon-right,
+    .banner_icon-left {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

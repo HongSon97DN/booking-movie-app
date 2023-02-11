@@ -1,0 +1,279 @@
+.ico_location {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+}
+
+.cinema__content {
+    border: 1px solid #424e61;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px 0 rgba(76, 104, 120, 0.47);
+}
+
+.cinema__header {
+    border-bottom: 1px solid #424e61;
+}
+
+.btn--cinema {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border: 1px;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 165, 0, 0.9);
+    cursor: pointer;
+}
+
+.cinema__search {
+    position: relative;
+}
+
+.form__cinema {
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    width: 100%;
+    caret-color: orange;
+
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.icon__search {
+    position: absolute;
+    font-size: 0.7rem;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.cinema__left {
+    border-right: 1px solid #424e61;
+}
+
+.cinema__list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.cinema__detail {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cinema__logo__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cinema__detail img {
+    max-width: 2rem;
+    border: 1px solid #768bad;
+    background-color: white;
+}
+
+.cinema__detail span {
+    display: inline-block;
+}
+
+.cinema__detail i {
+    font-size: 0.875rem;
+}
+
+.cinema__detail.active {
+    background-color: #424e61;
+    /* background-color: rgba(135, 150, 173, 0.47); */
+}
+
+.cinema__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.cinema__info img {
+    width: 2rem;
+    background-color: white;
+}
+
+.cinema__info h3,
+p {
+    margin: 0;
+}
+
+.cinema__info h3 {
+    font-size: 0.9375rem;
+    color: white;
+}
+
+.cinema__info p {
+    font-size: 0.8125rem;
+    color: darkgrey;
+    margin-bottom: 0;
+}
+
+.cinema__info {
+    border-bottom: 1px solid #768bad;
+}
+
+.calender {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 12px 20px;
+}
+
+.calender__card {
+    width: 95px;
+    border: 1px solid #768bad;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calender__header,
+.calender__body {
+    padding: 0.5rem 0.75rem;
+}
+
+.calender__header {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #768bad;
+}
+
+.calender__card.active .calender__header {
+    background-color: rgba(255, 165, 0, 0.9);
+}
+
+.calender__card.active {
+    border: 1px solid rgba(255, 165, 0, 0.9);
+}
+
+.calender__card:not(.calender__card.active):hover {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s;
+}
+
+.calender__body {
+    font-size: 0.75rem;
+}
+
+.showTime__movie {
+    padding: 1rem;
+    border-top: 1px solid #768bad;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.showTime__movie p {
+    margin-bottom: 0;
+}
+
+.showTime__movie .movie__content .age {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.5px 6px;
+    margin-bottom: 0.3rem;
+    border: 1px solid #e88021;
+    border-radius: 0.1rem;
+    background-color: #e88021;
+}
+
+.showTime__movie .movie__content .movie__type {
+    color: darkgrey;
+    font-size: 0.875rem;
+}
+
+.showTimes__detail .duration {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #768bad;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+.showTimes__detail .duration:hover {
+    border: 1px solid rgba(255, 165, 0, 0.9);
+    transition: all 0.3s;
+}
+
+.logo__container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #768bad;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logo__container:hover {
+    border: 1px solid var(--second-color);
+    transition: all 0.5s;
+}
+
+.cinema__logo {
+    max-width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ------------------------------- RESPONSIVE ------------------------------- */
+@media screen and (max-width: 1200px) {
+    .container__cinema {
+        max-width: 992px;
+    }
+    .calender__card {
+        width: 80px !important;
+    }
+    .calender__header,
+    .calender__body {
+        padding: 0 !important;
+    }
+    .cinema__logo__left span,
+    .cinema__info .cinema__address {
+        font-size: 0.8rem;
+    }
+    .movie__title {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .movie__right .movie__showtime,
+    .movie__right .movie__name {
+        font-size: 0.8rem;
+    }
+    .movie__right .title__date {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cinema__content .cinema__left {
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cinema__arrow__left {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .calender {
+        flex-flow: row wrap;
+    }
+    .cinema__info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,218 @@
+
+.ft_content ul li{
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.ft_content ul li a{
+    color: #fff;
+    text-transform: capitalize;
+}
+.ft_content ul li a:hover{
+    margin-left: 10px;
+    color: orange;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+.footer_movie .ft_aboutus{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.footer_img{
+    width: 100%;
+}
+.ft_content.ft_aboutus p{
+    font-size: 14px;
+}
+.footer_title{
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+}
+.footer_title::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: all 0.5s;
+    
+}
+.footer_title:hover::after{
+    width: 100%;   
+}
+
+.social_link .social_icon{
+    display: flex;
+    justify-content: space-between;
+}
+.social_link ul li{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+.social_link ul li:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+.social_link ul li:hover i{
+    color: #000;  
+    cursor: pointer;
+}
+.social_link ul li span{
+    font-size: 20px;
+}
+.social_link li i {
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 1, 0.1);
+}
+.social_icon li i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+.social_icon .bg_fb{
+    background-color: #3b5998;
+}
+.social_icon .bg_twitter{
+    background-color: #02b0e8;
+}
+.social_icon .bg_pinterest{
+    background-color: #b00a1b;
+}
+.social_icon .bg_youtube{
+    background-color: #c22e2a;
+}
+.social_icon .bg_intagram{
+    background-color: #00a098;
+}
+.ft-twitter-feed{
+    display: flex;
+}
+.twitter_content {
+    background-color: #060f19;
+}
+.ft_twitter_icon i{
+   padding: 20px 20px 0 20px;
+   color: orange;
+   font-size: 20px;
+   position: relative;
+}
+.ft_twitter_icon i::after {
+    content: "";
+    height: 45px;
+    width: 2px;
+    background: orange;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.ft_twitter_dec{
+    padding-left: 10px;
+}
+.ft_twitter_dec a {
+    color: #fff;
+    font-weight: bold;
+}
+.ft_twitter_dec a:hover{
+    color: orange;
+}
+.ft_twitter_dec span {
+    color: orange;
+    font-size: 14px;
+}
+.ft_twitter_meta ul li{
+    display: inline-block;
+}
+.ft_twitter_meta ul li a{
+    color: #999;
+}
+.ft_twitter_dec .ft_twitter_meta ul li span {
+    color: #999;
+}
+.ft_twitter_dec .ft_twitter_meta ul li:hover span {
+    color: orange;
+}
+.twitter_content span{
+    margin-left: 15px;
+}
+.newsletter_input{
+    margin-top: 10%;
+    position: relative;
+}
+.newsletter_input input{
+    width: 100%;
+    border-radius: 100px;
+    background: #fff;
+    border: 1px solid #fff;
+    padding: 7px 16px;
+    height: 42px;
+    color: #fff;
+}
+.newsletter_input input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #fff;
+}
+.newsletter_btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    color: #000;
+    border: transparent;
+    border-left: 1px solid #000;
+    padding: 10px 19px;
+    height: 100%;
+    z-index: 10;
+    border-radius: 0 20px 20px 0;
+}
+.newsletter_btn:hover{
+    border-color: orange;
+    background: orange;
+}
+.coppyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.coppyright a{
+    color: orange;
+}
+.bg__footer {
+    background-color: var(--bg-main-body);
+}
+/* --------------------- */
+
+@media screen and (max-width:992px) {
+    .footer_img{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .ft_content.ft_aboutus p{
+        padding: 10px 100px;
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-lg-3.col-md-6.col-sm-12{
+        text-align: center;
+    }
+    .social_link .social_icon {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

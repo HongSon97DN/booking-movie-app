@@ -1,0 +1,244 @@
+.cinema_header{
+    margin: 10px 0;
+    font-size: 3vw;
+}
+.cinema_banner-detail.banner {
+    height: 430px
+}
+
+.cinema_banner-detail .banner_content-mid {
+    padding: 60px 30px;
+}
+
+.cinema_banner-detail .banner_content-mid img {
+    width: 100%;
+    height: 100%;
+}
+
+.cinema_banner-detail .banner_content-mid .banner_wrap-icon-mini {
+    top: 50%
+}
+
+.cinema_banner-detail .cinema_title-release {
+    font-size: 40px;
+}
+
+.banner_detail-right div {
+    margin-top: 20px
+}
+
+.cinema_header-logo .logo_system {
+    margin: 0;
+}
+
+.logo_system {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.logo_system:first-child {
+    margin-top: 0;
+}
+
+.logo_system img {
+    height: 40px;
+    width: 40px;
+}
+
+.cinema_release-active {
+    background-color: var(--second-color);
+}
+
+.cinema_logo-active {
+    background-color: rgb(24, 24, 91);
+}
+
+
+.cinema_release-label {
+    padding: 10px;
+}
+
+.cinema_release-input {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+
+.cinema_release-label.active {
+    border-left: 1px solid yellow;
+    border-right: 1px solid yellow;
+
+}
+
+.cinema {
+    padding: 0 150px;
+}
+
+.cinema_release-date {
+    position: relative;
+    font-weight: 600;
+    padding: 4px;
+    display: inline-block;
+    font-size: 1.4vw;
+}
+
+.cinema_release-label.active .cinema_release-date {
+    background-color: yellow;
+    border-radius: 50%;
+
+}
+
+.cinema_release-label.active .cinema_release-day {
+    color: yellow;
+}
+
+.cinema_release-label.active .cinema_release-date {
+    color: #000;
+}
+
+.cinema_release-day {
+    font-weight: 600;
+    font-size: 1.8vw;
+    margin: 0;
+}
+
+.cinema_text {
+    font-weight: 500
+}
+
+.cinema_text-year {
+    font-size: 3vw;
+    color: yellow;
+}
+
+.cinema_text-month {
+    font-size: 2.4vw;
+}
+
+.cinema_title-cluster h5 {
+    color: rgb(198, 246, 5);
+    font-size: 16px;
+}
+
+.cinema_title-cluster h6 {
+    font-size: 14px;
+}
+
+.cinema_title {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.cinema_title-release {
+    color: yellow;
+    font-size: 2.2vw;
+    font-weight: 600;
+}
+
+.cinema_title-release-date {
+    font-weight: 600;
+    font-size: 2vw;
+    margin: 5px 0;
+}
+
+.cinema_title-release-date span {
+    color: red;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cinema_title-release-ticket {
+    color: #0be00b;
+    ;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.cinema_list-film h3 {
+    color: red;
+    font-size: 2.6vw;
+    padding: 20px;
+}
+
+.detail_banner-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinema_calender-wrap-bot img {
+    height: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+.cinema_calender-img {
+    max-height: 200px;
+
+}
+
+.cinema_calender-img img {}
+
+@media (max-width: 576px) {
+    .cinema_banner-detail .cinema_title-release {
+        font-size: 20px;
+    }
+
+    .cinema_banner-detail.banner {
+        height: 350px;
+    }
+
+    .cinema_banner-detail .banner_content-mid {
+        padding: 20px;
+    }
+
+    .cinema {
+        padding: 0 30px;
+    }
+
+
+
+    .logo_system img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .cinema_title-cluster h5 {
+        font-size: 10px;
+
+    }
+
+    .cinema_title-cluster h6 {
+        font-size: 8px;
+    }
+
+    .cinema_title {
+        margin-top: 2px;
+        font-size: 8px;
+    }
+
+    .cinema_release-day {
+        font-size: 10px;
+    }
+
+    .cinema_release-date {
+        font-size: 10px;
+    }
+
+    .cinema_calender-img {
+        max-height: 80px;
+    }
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
